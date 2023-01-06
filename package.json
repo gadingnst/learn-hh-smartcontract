@@ -3,7 +3,7 @@
   "scripts": {
     "contract:compile": "hardhat compile",
     "contract:deploy:Election:ganache": "hardhat run scripts/deploy:Election.ts --network ganache",
-    "contract:deploy:Lock:ganache": "hardhat run scripts/deploy:Lock.ts --network ganache"
+    "contract:deploy:Election:goerli": "hardhat run scripts/deploy:Election.ts --network goerli"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^2.0.0",
