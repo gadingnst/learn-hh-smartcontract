@@ -5,7 +5,7 @@ import DotEnv from 'dotenv';
 DotEnv.config({ path: '.env' });
 
 const {
-  GOERLI_ACCOUNT_PRIVATE_KEY = '',
+  ACCOUNT_PRIVATE_KEY = '',
   SANDBOX_2P5_URL = '',
   ALCHEMY_KEY = ''
 } = process.env;
@@ -22,11 +22,13 @@ const config: HardhatUserConfig = {
   networks: {
     sandbox2p5: {
       url: SANDBOX_2P5_URL,
-      chainId: 2525
+      chainId: 2525,
+      accounts: [ACCOUNT_PRIVATE_KEY],
+      gasPrice: 20000000000
     },
     goerli: {
       url: `https://eth-goerli.g.alchemy.com/v2/${ALCHEMY_KEY}`,
-      accounts: [GOERLI_ACCOUNT_PRIVATE_KEY],
+      accounts: [ACCOUNT_PRIVATE_KEY],
       gasPrice: 20000000000,
     },
     ganache: {

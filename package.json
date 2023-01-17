@@ -2,7 +2,7 @@
   "name": "election-project",
   "scripts": {
     "contract:compile": "hardhat compile",
-    "contract:deploy:Election": "hardhat run scripts/deploy:Election.ts",
+    "contract:deploy:Election": "hardhat run scripts/deploy:Election.ts --network sandbox2p5",
     "contract:deploy:Election:ganache": "hardhat run scripts/deploy:Election.ts --network ganache",
     "contract:deploy:Election:goerli": "hardhat run scripts/deploy:Election.ts --network goerli"
   },
